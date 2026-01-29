@@ -10,17 +10,17 @@ from azure.core.exceptions import AzureError
 from dotenv import load_dotenv
 
 load_dotenv()
-
+print(os.environ)
 # CONFIGURATIONS - Replace with your actual values or set as env vars
-COSMOS_ENDPOINT = os.environ.get("COSMOS_ENDPOINT")
-COSMOS_KEY = os.environ.get("COSMOS_KEY")
-DATABASE_NAME = os.environ.get("DATABASE_NAME")
-CONTAINER_NAME = os.environ.get("CONTAINER_NAME")
+COSMOS_ENDPOINT = "https://zymfgf65p2k3c-cosmosdb.documents.azure.com:443/"
+COSMOS_KEY = ""
+DATABASE_NAME = "zava"
+CONTAINER_NAME = "product_catalog"
 JSON_FILE = os.environ.get("JSON_FILE", "data/product_catalog.json")
-EMBEDDING_ENDPOINT = os.environ.get("embedding_endpoint")
-EMBEDDING_DEPLOYMENT = os.environ.get("embedding_deployment")
-EMBEDDING_API_KEY = os.environ.get("embedding_api_key")
-EMBEDDING_API_VERSION = os.environ.get("embedding_api_version")
+EMBEDDING_ENDPOINT = "https://aif-zymfgf65p2k3c.cognitiveservices.azure.com"
+EMBEDDING_DEPLOYMENT = "text-embedding-3-large"
+EMBEDDING_API_KEY = ""
+EMBEDDING_API_VERSION = "2025-01-01-preview"
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.WARNING)
